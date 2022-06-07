@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "789634589873",
+    "project_id": "studytimes-4efe5",
+    "storage_bucket": "studytimes-4efe5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789634589873:android:518b61f1098abceb312e90",
+        "android_client_info": {
+          "package_name": "com.fyp.studytimes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789634589873-4mo9itvhg7h6clihavmnoovb2gm6up3t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN90a7xqMCcUr8embn50qDLQXdOrChu4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789634589873-4mo9itvhg7h6clihavmnoovb2gm6up3t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
