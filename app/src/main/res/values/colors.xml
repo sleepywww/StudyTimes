@@ -6,4 +6,5 @@
     <color name="main_3">#005DFF</color>
     <color name="main_4">#96FFC8</color>
     <color name="main_5">#5ED9FF</color>
+    <color name="input_field">#30ffffff</color>
 </resources>
