@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">StudyTimes</string>
-    <string name="title_activity_registration">Registration</string>
     <string name="sign_up">Sign Up</string>
+    <string name="sign_up_caps">SIGN UP</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_caps">SIGN IN</string>
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -9,7 +11,5 @@
     <string name="i_agree_to_the">I agree to the</string>
     <string name="terms_of_service">Terms of Service</string>
     <string name="already_have_an_account">Already have an account?</string>
-    <string name="sign_in">Sign In</string>
-    <string name="sign_up_caps">SIGN UP</string>
     <string name="logo_for_splash_screen">Logo for Splash Screen</string>
 </resources>
