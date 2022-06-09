@@ -16,10 +16,10 @@ import com.google.firebase.database.FirebaseDatabase
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var userAuth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
-    private var username: EditText = findViewById(R.id.etUsername)
-    private var email: EditText = findViewById(R.id.etEmail)
-    private var password: EditText = findViewById(R.id.etPassword)
-    private var rePassword: EditText = findViewById(R.id.etConfirmPassword)
+    private var username: EditText = findViewById(R.id.etRegisterUsername)
+    private var email: EditText = findViewById(R.id.etRegisterEmail)
+    private var password: EditText = findViewById(R.id.etRegisterPassword)
+    private var rePassword: EditText = findViewById(R.id.etRegisterConfirmPassword)
     private val register: Button = findViewById(R.id.btnRegister)
     private val accountExist: TextView = findViewById(R.id.tvSignIn)
 
