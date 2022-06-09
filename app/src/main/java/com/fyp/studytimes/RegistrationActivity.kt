@@ -19,7 +19,7 @@ class RegistrationActivity : AppCompatActivity() {
     private var rePassword: EditText = findViewById(R.id.etRegisterConfirmPassword)
     private var agree: CheckBox = findViewById(R.id.cbAgree)
     private val register: Button = findViewById(R.id.btnRegister)
-    private val accountExist: TextView = findViewById(R.id.tvSignIn)
+    private val accountExist: TextView = findViewById(R.id.tvSignInHere)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

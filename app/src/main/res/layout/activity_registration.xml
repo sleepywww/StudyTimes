@@ -189,7 +189,7 @@
             tools:ignore="RtlSymmetry" />
 
         <TextView
-            android:id="@+id/tvSignIn"
+            android:id="@+id/tvSignInHere"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
