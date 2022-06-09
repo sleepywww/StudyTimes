@@ -11,4 +11,5 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up_caps">SIGN UP</string>
+    <string name="logo_for_splash_screen">Logo for Splash Screen</string>
 </resources>
