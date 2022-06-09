@@ -3,10 +3,7 @@ package com.fyp.studytimes
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -20,6 +17,7 @@ class RegistrationActivity : AppCompatActivity() {
     private var email: EditText = findViewById(R.id.etRegisterEmail)
     private var password: EditText = findViewById(R.id.etRegisterPassword)
     private var rePassword: EditText = findViewById(R.id.etRegisterConfirmPassword)
+    private var agree: CheckBox = findViewById(R.id.cbAgree)
     private val register: Button = findViewById(R.id.btnRegister)
     private val accountExist: TextView = findViewById(R.id.tvSignIn)
 
@@ -40,12 +38,15 @@ class RegistrationActivity : AppCompatActivity() {
             } else if (password.text.toString() != rePassword.text.toString()) {
                 Toast.makeText(this, "Password confirmation does not match", Toast.LENGTH_SHORT)
                     .show()
-            } else {
+            } else if (agree.isChecked) {
                 registerAccount(
                     username.text.toString(),
                     email.text.toString(),
                     password.text.toString()
                 )
+            } else {
+                Toast.makeText(this, "Please agree to StudyTimes's terms and conditions", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 
