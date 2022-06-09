@@ -76,7 +76,7 @@ class RegistrationActivity : AppCompatActivity() {
 
                 reference.child(uid).setValue(hashMap)
 
-                Toast.makeText(this, "Welcome to StudyTimes", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Register successfully", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
