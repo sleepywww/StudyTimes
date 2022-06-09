@@ -28,6 +28,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
+        android:autofillHints=""
         android:background="@drawable/round_border"
         android:drawableStart="@drawable/ic_username"
         android:drawablePadding="10dp"
@@ -41,8 +42,7 @@
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogin"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -52,6 +52,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
+        android:autofillHints=""
         android:background="@drawable/round_border"
         android:drawableStart="@drawable/ic_password"
         android:drawablePadding="10dp"
@@ -65,8 +66,7 @@
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsername"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -76,6 +76,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
+        android:autofillHints=""
         android:background="@drawable/round_border"
         android:drawableStart="@drawable/ic_password"
         android:drawablePadding="10dp"
@@ -90,8 +91,7 @@
         app:endIconDrawable="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <EditText
         android:id="@+id/etConfirmPassword"
@@ -101,6 +101,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
+        android:autofillHints=""
         android:background="@drawable/round_border"
         android:drawableStart="@drawable/ic_password"
         android:drawablePadding="10dp"
@@ -115,8 +116,7 @@
         app:endIconDrawable="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <Button
         android:id="@+id/btnRegister"
