@@ -88,7 +88,6 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="23sp"
-        app:endIconDrawable="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRegisterEmail" />
@@ -113,7 +112,6 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="23sp"
-        app:endIconDrawable="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRegisterPassword" />
