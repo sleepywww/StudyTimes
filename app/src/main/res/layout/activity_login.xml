@@ -22,7 +22,7 @@
                 android:id="@+id/tvSignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="35dp"
                 android:layout_marginTop="200dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/sign_in"
@@ -33,6 +33,7 @@
 
             <EditText
                 android:id="@+id/etLoginEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -56,6 +57,7 @@
 
             <EditText
                 android:id="@+id/etLoginPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -92,12 +94,15 @@
 
             <Button
                 android:id="@+id/btnLogin"
-                android:layout_width="325dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="@color/main_1"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@color/white"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/sign_in_caps"
+                android:textColor="@color/main_2"
                 android:textSize="25sp"
                 app:cornerRadius="90dp"
                 app:layout_constraintEnd_toEndOf="parent"
