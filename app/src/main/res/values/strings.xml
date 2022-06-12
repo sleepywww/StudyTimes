@@ -14,4 +14,8 @@
     <string name="logo_for_splash_screen">Logo for Splash Screen</string>
     <string name="forget_password">Forget Password?</string>
     <string name="not_register_yet">Not register yet?</string>
+    <string name="back">Back</string>
+    <string name="enter_your_email">Enter your email to get an email to reset your password</string>
+    <string name="reset">Reset</string>
+    <string name="reset_email_was_sent">Reset email was sent to your email</string>
 </resources>
