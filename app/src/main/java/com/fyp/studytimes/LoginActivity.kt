@@ -1,8 +1,11 @@
+@file:Suppress("DEPRECATION")
+
 package com.fyp.studytimes
 
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -14,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var forgetPassword: TextView
     private lateinit var registerHere: TextView
     private lateinit var pDialog: ProgressDialog
-    private lateinit var userAuth: FirebaseAuth
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,21 +26,17 @@ class LoginActivity : AppCompatActivity() {
         initVar() // Initialize variable in this activity
 
         login.setOnClickListener {
-            if (email.text.toString() == "" || password.text.toString() == "") { // Check if input field is empty
-                Toast.makeText(this@LoginActivity, "Email and password cannot be empty", Toast.LENGTH_SHORT).show()
-            } else {
-                loginUser(email.text.toString(), password.text.toString()) // Login user
-            }
+            checkInput(email.text.toString(), password.text.toString())
         }
 
-        forgetPassword.setOnClickListener { // Direct user to recover password
-            val intent= Intent(this@LoginActivity, PasswordRecoveryActivity::class.java)
-            startActivity(intent)
+        forgetPassword.setOnClickListener {
+            val intent = Intent(this@LoginActivity, PasswordRecoveryActivity::class.java)
+            startActivity(intent) // Direct user to recover password
         }
 
-        registerHere.setOnClickListener { // Direct user to register account
-            val intent= Intent(this@LoginActivity, RegistrationActivity::class.java)
-            startActivity(intent)
+        registerHere.setOnClickListener {
+            val intent = Intent(this@LoginActivity, RegistrationActivity::class.java)
+            startActivity(intent) // Direct user to register account
         }
     }
 
@@ -52,18 +51,36 @@ class LoginActivity : AppCompatActivity() {
         pDialog.setMessage("Loading")
         pDialog.setCanceledOnTouchOutside(false)
 
-        userAuth = FirebaseAuth.getInstance()
+        mAuth = FirebaseAuth.getInstance()
+    }
+
+    private fun checkInput(emailInput: String, passwordInput: String) {
+        if (emailInput == "") { // Check if email input is empty
+            email.error = "Please Enter An Email"
+        } else if (passwordInput == "") { // Check if password input is empty
+            password.error = "Please Enter A Password"
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(emailInput)
+                .matches()
+        ) { // Check if email format is valid
+            email.error = "Please Enter An Valid Email"
+        } else {
+            loginUser(emailInput, passwordInput) // Login user
+        }
     }
 
     private fun loginUser(emailInput: String, passwordInput: String) {
-        userAuth.signInWithEmailAndPassword(emailInput, passwordInput)
-            .addOnSuccessListener { // Direct user to main page
-                val intent= Intent(this@LoginActivity, MainActivity::class.java)
-                startActivity(intent)
+        mAuth.signInWithEmailAndPassword(emailInput, passwordInput)
+            .addOnSuccessListener {
+                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                startActivity(intent) // Direct user to main page
                 finish()
             }
             .addOnFailureListener {
-                Toast.makeText(this@LoginActivity, "Incorrect email or password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this@LoginActivity,
+                    "Incorrect email or password",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 }
