@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.fyp.studytimes
 
 import android.annotation.SuppressLint
