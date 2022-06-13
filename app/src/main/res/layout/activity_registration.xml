@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
-                android:layout_marginTop="125dp"
+                android:layout_marginTop="135dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="@string/sign_up"
                 android:textColor="@color/white"
@@ -70,7 +70,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
@@ -94,7 +94,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etRegisterUsername" />
@@ -118,7 +118,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etRegisterEmail" />
@@ -142,7 +142,7 @@
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etRegisterPassword" />
@@ -183,7 +183,7 @@
                     android:paddingEnd="5dp"
                     android:text="@string/i_agree_to_the"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
@@ -194,7 +194,7 @@
                     android:fontFamily="@font/roboto_bold"
                     android:text="@string/terms_of_service"
                     android:textColor="@color/main_5"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -217,7 +217,7 @@
                     android:paddingEnd="5dp"
                     android:text="@string/already_have_an_account"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     tools:ignore="RtlSymmetry" />
 
                 <TextView
@@ -227,7 +227,7 @@
                     android:fontFamily="@font/roboto_bold"
                     android:text="@string/sign_in"
                     android:textColor="@color/main_5"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
