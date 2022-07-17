@@ -67,6 +67,7 @@
                 android:fontFamily="@font/roboto"
                 android:hint="@string/username"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
@@ -91,6 +92,7 @@
                 android:fontFamily="@font/roboto"
                 android:hint="@string/email"
                 android:inputType="textEmailAddress"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
@@ -102,7 +104,6 @@
             <EditText
                 android:id="@+id/etRegisterPassword"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
@@ -115,13 +116,15 @@
                 android:fontFamily="@font/roboto"
                 android:hint="@string/password"
                 android:inputType="textPassword"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etRegisterEmail" />
+                app:layout_constraintTop_toBottomOf="@+id/etRegisterEmail"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
                 android:id="@+id/etRegisterConfirmPassword"
@@ -139,6 +142,7 @@
                 android:fontFamily="@font/roboto"
                 android:hint="@string/confirm_password"
                 android:inputType="textPassword"
+                android:minHeight="48dp"
                 android:padding="10dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
