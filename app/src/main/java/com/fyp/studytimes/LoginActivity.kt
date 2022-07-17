@@ -63,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
                 .matches()
         ) { // Check if email format is valid
             email.error = "Please Enter An Valid Email"
-        } else {
+        } else {  // If everything was correct
             loginUser(emailInput, passwordInput) // Login user
         }
     }
