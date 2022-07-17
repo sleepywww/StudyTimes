@@ -3,12 +3,14 @@
 package com.fyp.studytimes
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
 
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var back: Button
@@ -22,7 +24,7 @@ class RegistrationActivity : AppCompatActivity() {
     private lateinit var loginHere: TextView
     private lateinit var pDialog: ProgressDialog
     private lateinit var mAuth: FirebaseAuth
-    private lateinit var mUser: FirebaseUser
+    private lateinit var mDatabase: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,9 +36,9 @@ class RegistrationActivity : AppCompatActivity() {
             finish() // Direct user back to previous page
         }
 
-        term.setOnClickListener {
+        //term.setOnClickListener {
 
-        }
+        //}
 
         register.setOnClickListener {
             checkInput(
@@ -48,7 +50,8 @@ class RegistrationActivity : AppCompatActivity() {
         }
 
         loginHere.setOnClickListener {
-
+            val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
+            startActivity(intent) // Direct user to register account
         }
     }
 
@@ -93,7 +96,7 @@ class RegistrationActivity : AppCompatActivity() {
         } else {
             mAuth.fetchSignInMethodsForEmail(emailInput) // Check if account with email input existed
                 .addOnSuccessListener {
-                    registerUser(emailInput, passwordInput) // Login user
+                    registerUser(usernameInput, emailInput, passwordInput) // Login user
                 }
                 .addOnFailureListener {
                     Toast.makeText(this@RegistrationActivity, "Error", Toast.LENGTH_SHORT)
@@ -102,20 +105,57 @@ class RegistrationActivity : AppCompatActivity() {
         }
     }
 
-    private fun registerUser(emailInput: String, passwordInput: String) {
+    private fun registerUser(usernameInput: String, emailInput: String, passwordInput: String) {
         pDialog.show()
 
         mAuth.createUserWithEmailAndPassword(emailInput, passwordInput)
             .addOnSuccessListener {
-                pDialog.dismiss()
+                mAuth.signInWithEmailAndPassword(emailInput, passwordInput)
+                    .addOnSuccessListener {
+                        mDatabase.child("User").child(usernameInput).get()
+                            .addOnSuccessListener {
+                                val newUser =
+                                    User(usernameInput, emailInput, passwordInput, "Normal")
 
-                mUser = mAuth.currentUser!!
-            }
-            .addOnFailureListener {
-                pDialog.dismiss()
+                                mDatabase.child("User").child(newUser.username).setValue(newUser)
+                                    .addOnSuccessListener {
+                                        pDialog.dismiss()
 
-                Toast.makeText(this@RegistrationActivity, "Error", Toast.LENGTH_SHORT)
-                    .show()
+                                        val intent = Intent(
+                                            this@RegistrationActivity,
+                                            MainActivity::class.java
+                                        )
+                                        startActivity(intent) // Direct user to main page
+                                        finish()
+                                    }
+                                    .addOnFailureListener {
+                                        pDialog.dismiss()
+
+                                        Toast.makeText(
+                                            this@RegistrationActivity,
+                                            "Error",
+                                            Toast.LENGTH_SHORT
+                                        )
+                                            .show()
+                                    }
+                            }
+                            .addOnFailureListener {
+                                pDialog.dismiss()
+
+                                Toast.makeText(
+                                    this@RegistrationActivity,
+                                    "Error",
+                                    Toast.LENGTH_SHORT
+                                )
+                                    .show()
+                            }
+                    }
+                    .addOnFailureListener {
+                        pDialog.dismiss()
+
+                        Toast.makeText(this@RegistrationActivity, "Error", Toast.LENGTH_SHORT)
+                            .show()
+                    }
             }
     }
 }
