@@ -69,13 +69,19 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginUser(emailInput: String, passwordInput: String) {
+        pDialog.show()
+
         mAuth.signInWithEmailAndPassword(emailInput, passwordInput)
             .addOnSuccessListener {
+                pDialog.dismiss()
+
                 val intent = Intent(this@LoginActivity, MainActivity::class.java)
                 startActivity(intent) // Direct user to main page
                 finish()
             }
             .addOnFailureListener {
+                pDialog.dismiss()
+
                 Toast.makeText(
                     this@LoginActivity,
                     "Incorrect email or password",
