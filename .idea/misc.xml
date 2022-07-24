@@ -20,9 +20,11 @@
         <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.1095" />
         <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1095" />
         <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1925" />
-        <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/layout/activity_main.xml" value="0.10104166666666667" />
+        <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/layout/activity_password_recovery.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/layout/activity_registration.xml" value="0.1621376811594203" />
         <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/layout/activity_splash_screen.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/layout/fragment_dash_board.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/layout/fragment_profile.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/shenm/StudioProjects/StudyTimes/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25" />
       </map>
